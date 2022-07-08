@@ -59,7 +59,8 @@ namespace Cto.Tutorial.Domain.Orders
 
       public void AddOrderItem(Guid productId)
       {
-
+         var item = SalesOrderItem.Create(productId);
+         _orderItems.Add(item);
       }
    }
 }
