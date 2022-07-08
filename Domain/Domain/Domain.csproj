@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+	 <AssemblyName>Cto.Tutorial.Domain.$(MSBuildProjectName)</AssemblyName>
+	 <RootNamespace>Cto.Tutorial.Domain.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
