@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace CqrsApi.Controllers
+namespace Cto.Tutorial.CqrsApi.Controllers
 {
    [ApiController]
    [Route("[controller]")]

@@ -1,6 +1,13 @@
+using Cto.Tutorial.CqrsApi.Controllers;
+using Cto.Tutorial.CqrsApi.Database;
+using MediatR;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddSingleton<FakeDatabase>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

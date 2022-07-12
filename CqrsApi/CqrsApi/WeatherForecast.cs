@@ -1,4 +1,4 @@
-namespace CqrsApi
+namespace Cto.Tutorial.CqrsApi
 {
    public class WeatherForecast
    {
