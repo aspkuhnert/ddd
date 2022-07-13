@@ -20,7 +20,7 @@ namespace Cto.Tutorial.CqrsApi.QueryHandlers
 
       private ProductView FromProduct(Product product)
       {
-         return new ProductView() { Id = Guid.NewGuid(), Name = product.Name };
+         return new ProductView() { Id = product.Id, Name = product.Name };
       }
    }
 }
