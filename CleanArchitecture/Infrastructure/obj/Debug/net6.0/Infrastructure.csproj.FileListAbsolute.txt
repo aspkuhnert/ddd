@@ -1,0 +1,12 @@
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.deps.json
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.pdb
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\refint\Cto.Tutorial.CleanArchitecture.Infrastructure.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.pdb
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\ref\Cto.Tutorial.CleanArchitecture.Infrastructure.dll

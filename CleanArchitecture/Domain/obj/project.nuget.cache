@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Uk1D6mqbPRkfH/IEGxH8nqSN5C8AD++Qq1pruXujeqhDK0bfhKECFVUhs2+4SDDq4d5MJ8RmX6MLm7QhdL+kpg==",
+  "success": true,
+  "projectFilePath": "C:\\Source\\Experiments\\ddd\\CleanArchitecture\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anja\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Anja\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
