@@ -1,5 +1,6 @@
 ﻿using Cto.Tutorial.CqrsApi.Commands;
 using Cto.Tutorial.CqrsApi.Models;
+using Cto.Tutorial.CqrsApi.Notifications;
 using Cto.Tutorial.CqrsApi.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -20,11 +21,12 @@ namespace Cto.Tutorial.CqrsApi.Controllers
       {
          var productToReturn = await _mediator.Send(new CreateProductCommand(request));
 
-         //await _mediator.Publish(new ProductAddedNotification(productToReturn));
+         await _mediator.Publish(new ProductCreatedNotification(productToReturn));
 
          return CreatedAtRoute("GetById", new { id = productToReturn.Id }, productToReturn);
       }
 
+      [Route("Products")]
       [HttpGet]
       public async Task<ActionResult> GetProducts()
       {
@@ -39,6 +41,15 @@ namespace Cto.Tutorial.CqrsApi.Controllers
          var product = await _mediator.Send(new GetProductByIdQuery(id));
 
          return Ok(product);
+      }
+
+      [Route("Events")]
+      [HttpGet]
+      public async Task<ActionResult> GetDomainEvents()
+      {
+         var events = await _mediator.Send(new GetDomainEventsQuery());
+
+         return Ok(events);
       }
    }
 }

@@ -28,3 +28,4 @@ C:\Source\Experiments\ddd\CqrsApi\CqrsApi\obj\Debug\net6.0\Cto.Tutorial.CqrsApi.
 C:\Source\Experiments\ddd\CqrsApi\CqrsApi\obj\Debug\net6.0\CqrsApi.genruntimeconfig.cache
 C:\Source\Experiments\ddd\CqrsApi\CqrsApi\obj\Debug\net6.0\ref\Cto.Tutorial.CqrsApi.dll
 C:\Source\Experiments\ddd\CqrsApi\CqrsApi\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Source\Experiments\ddd\CqrsApi\CqrsApi\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nloIlpjSUrhdAMbbnYiTZQMDWJMyaBJPUd3F87ld7y+8X1xtNZj6xTGKeOv5TOGgcoubavX/hmWn2ubr+aQFHA==",
+  "dgSpecHash": "8r4vp/CzZVSSIENzn/jEzcPTaVty0+YFOU043i1aKV/CTVz4QAsUiC5xvMn+6tYbG8xAKAN2hVb7PoE2KbfH2g==",
   "success": true,
   "projectFilePath": "C:\\Source\\Experiments\\ddd\\CqrsApi\\CqrsApi\\CqrsApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Anja\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
