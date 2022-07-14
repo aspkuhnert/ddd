@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r3inkocoJ0v5H9JI6PRUPjj5WAeue0WlzB3wDo2OrAitlBlCBSlKcWsVpRBT7vmdjf6k9JG3x/G8/kE1px1hYw==",
+  "dgSpecHash": "6rbwmMSYsetlInnq/CzhiArna0q9hOb+8krAeV/bh75ZwJCN/xrpDGK8oaXvAptccJIPkWtPo141yyNlglJfHg==",
   "success": true,
   "projectFilePath": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Anja\\.nuget\\packages\\messagepack.annotations\\2.4.35\\messagepack.annotations.2.4.35.nupkg.sha512"
+  ],
   "logs": []
 }

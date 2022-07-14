@@ -97,5 +97,6 @@ C:\Source\Experiments\ddd\Domain\Tests\obj\Debug\net6.0\Tests.pdb
 C:\Source\Experiments\ddd\Domain\Tests\obj\Debug\net6.0\Tests.genruntimeconfig.cache
 C:\Source\Experiments\ddd\Domain\Tests\obj\Debug\net6.0\ref\Tests.dll
 C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\Cto.Tutorial.Domain.Domain.dll
-C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\Cto.Tutorial.Domain.Domain.pdb
+C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\Cto.Tutorial.Domain.dll
+C:\Source\Experiments\ddd\Domain\Tests\bin\Debug\net6.0\Cto.Tutorial.Domain.pdb

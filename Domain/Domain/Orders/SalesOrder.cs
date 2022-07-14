@@ -57,10 +57,19 @@ namespace Cto.Tutorial.Domain.Orders
          return new SalesOrder(id);
       }
 
-      public void AddOrderItem(Guid productId)
+      public SalesOrder AddOrderItem(Guid productId)
       {
          var item = SalesOrderItem.Create(productId);
          _orderItems.Add(item);
+
+         return this;
+      }
+
+      public SalesOrder AddAddress(Address address)
+      {
+         this.Address = address;
+
+         return this;
       }
    }
 }

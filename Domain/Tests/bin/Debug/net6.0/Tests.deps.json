@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Tests/1.0.0": {
         "dependencies": {
-          "Cto.Tutorial.Domain.Domain": "1.0.0",
+          "Cto.Tutorial.Domain": "1.0.0",
           "MSTest.TestAdapter": "2.2.7",
           "MSTest.TestFramework": "2.2.7",
           "Microsoft.NET.Test.Sdk": "16.11.0",
@@ -19,6 +19,14 @@
         }
       },
       "coverlet.collector/3.1.0": {},
+      "MessagePack.Annotations/2.4.35": {
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.35.46570"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/16.11.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -1077,9 +1085,12 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Cto.Tutorial.Domain.Domain/1.0.0": {
+      "Cto.Tutorial.Domain/1.0.0": {
+        "dependencies": {
+          "MessagePack.Annotations": "2.4.35"
+        },
         "runtime": {
-          "Cto.Tutorial.Domain.Domain.dll": {}
+          "Cto.Tutorial.Domain.dll": {}
         }
       }
     }
@@ -1096,6 +1107,13 @@
       "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
       "path": "coverlet.collector/3.1.0",
       "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
+    },
+    "MessagePack.Annotations/2.4.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6wfQ3Law5TMPeMm/HpYpMLal5HzEj70QFmbXWzHJjRsxF+nEol8RP3mqGUIctN9pItdtKCpbrpP8iEpSCkORCA==",
+      "path": "messagepack.annotations/2.4.35",
+      "hashPath": "messagepack.annotations.2.4.35.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.11.0": {
       "type": "package",
@@ -1706,7 +1724,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Cto.Tutorial.Domain.Domain/1.0.0": {
+    "Cto.Tutorial.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

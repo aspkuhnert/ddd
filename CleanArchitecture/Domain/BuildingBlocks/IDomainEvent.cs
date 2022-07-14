@@ -7,10 +7,6 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks
    {
       Guid Id { get; }
 
-      string ModelId { get; }
-
       DateTime OccurredOn { get; }
-
-      int Version { get; }
    }
 }

@@ -8,6 +8,15 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "MessagePack.Annotations/2.4.35": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.11.0": {
         "type": "package",
         "compile": {
@@ -1661,14 +1670,17 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Cto.Tutorial.Domain.Domain/1.0.0": {
+      "Cto.Tutorial.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MessagePack.Annotations": "2.4.35"
+        },
         "compile": {
-          "bin/placeholder/Cto.Tutorial.Domain.Domain.dll": {}
+          "bin/placeholder/Cto.Tutorial.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Cto.Tutorial.Domain.Domain.dll": {}
+          "bin/placeholder/Cto.Tutorial.Domain.dll": {}
         }
       }
     }
@@ -1723,6 +1735,20 @@
         "coverlet-icon.png",
         "coverlet.collector.3.1.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "MessagePack.Annotations/2.4.35": {
+      "sha512": "6wfQ3Law5TMPeMm/HpYpMLal5HzEj70QFmbXWzHJjRsxF+nEol8RP3mqGUIctN9pItdtKCpbrpP8iEpSCkORCA==",
+      "type": "package",
+      "path": "messagepack.annotations/2.4.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.2.4.35.nupkg.sha512",
+        "messagepack.annotations.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/16.11.0": {
@@ -6204,7 +6230,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Cto.Tutorial.Domain.Domain/1.0.0": {
+    "Cto.Tutorial.Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
@@ -6212,7 +6238,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Cto.Tutorial.Domain.Domain >= 1.0.0",
+      "Cto.Tutorial.Domain >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
       "Microsoft.NET.Test.Sdk >= 16.11.0",

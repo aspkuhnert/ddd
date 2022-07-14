@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\Domain.csproj",
-        "projectName": "Cto.Tutorial.Domain.Domain",
+        "projectName": "Cto.Tutorial.Domain",
         "projectPath": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Anja\\.nuget\\packages\\",
         "outputPath": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\obj\\",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MessagePack.Annotations": {
+              "target": "Package",
+              "version": "[2.4.35, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -10,3 +10,8 @@ C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Cto.
 C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\refint\Cto.Tutorial.CleanArchitecture.Infrastructure.dll
 C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.pdb
 C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\ref\Cto.Tutorial.CleanArchitecture.Infrastructure.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Infrastructure.runtimeconfig.json
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Domain.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Domain.pdb
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+C:\Source\Experiments\ddd\CleanArchitecture\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache

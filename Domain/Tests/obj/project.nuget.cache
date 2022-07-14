@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xhLmgDrUFvvJ5HIVRlxcX3sxtdtcbkZYDgtClcJdr3BQRdhHzn63q/kN5L8wZ2pWuYNZVWt3hKYbJA6XgrduAA==",
+  "dgSpecHash": "cw6n72SmU2FOhqYYrBAw9Szt3OReDQOlVA0P+clkIfb789Rel7N7QFr0vlGeKQCCor/KqCAANREnsaBFNPSb4w==",
   "success": true,
   "projectFilePath": "C:\\Source\\Experiments\\ddd\\Domain\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anja\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
+    "C:\\Users\\Anja\\.nuget\\packages\\messagepack.annotations\\2.4.35\\messagepack.annotations.2.4.35.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\microsoft.net.test.sdk\\16.11.0\\microsoft.net.test.sdk.16.11.0.nupkg.sha512",

@@ -1,11 +1,38 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "MessagePack.Annotations/2.4.35": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MessagePack.Annotations/2.4.35": {
+      "sha512": "6wfQ3Law5TMPeMm/HpYpMLal5HzEj70QFmbXWzHJjRsxF+nEol8RP3mqGUIctN9pItdtKCpbrpP8iEpSCkORCA==",
+      "type": "package",
+      "path": "messagepack.annotations/2.4.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.2.4.35.nupkg.sha512",
+        "messagepack.annotations.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "MessagePack.Annotations >= 2.4.35"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Anja\\.nuget\\packages\\": {}
@@ -14,7 +41,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\Domain.csproj",
-      "projectName": "Cto.Tutorial.Domain.Domain",
+      "projectName": "Cto.Tutorial.Domain",
       "projectPath": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Anja\\.nuget\\packages\\",
       "outputPath": "C:\\Source\\Experiments\\ddd\\Domain\\Domain\\obj\\",
@@ -45,6 +72,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "MessagePack.Annotations": {
+            "target": "Package",
+            "version": "[2.4.35, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
