@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("CTO Software GmbH, Aachen");
 
 var host = CreateHostBuilder(args).Build();
 

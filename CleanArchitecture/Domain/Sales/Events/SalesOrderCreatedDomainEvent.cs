@@ -1,9 +1,4 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Sales.Events
 {
@@ -12,16 +7,22 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales.Events
    {
       public Guid SalesOrderId { get; }
 
+      public DateTime OrderDate { get; }
+
       public string OrderNumber { get; }
 
-      public Address Address { get; }
+      public Address PlacingCustomer { get; }
 
-      public SalesOrderCreatedDomainEvent(Guid id, string orderNumber, Address address)
+      public List<SalesOrderItem> Items { get; }
+
+      public SalesOrderCreatedDomainEvent(Guid id, DateTime orderDate, string orderNumber, Address placingCustomer, List<SalesOrderItem> items)
          : base()
       {
          SalesOrderId = id;
+         OrderDate = orderDate;
          OrderNumber = orderNumber;
-         Address = address;
+         PlacingCustomer = placingCustomer;
+         Items = items;
       }
    }
 }

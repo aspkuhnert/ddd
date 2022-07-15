@@ -1,10 +1,5 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 {
@@ -38,12 +33,6 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
       {
          Id = Guid.NewGuid();
          _orderItems = new List<SalesOrderItem>();
-         _statusId = SalesOrderStatus.Started.Id;
-         OrderDate = DateTime.Now;
-
-         var domainEvent = new SalesOrderStartedDomainEvent(Id);
-         Apply(domainEvent);
-         AddDomainEvent(domainEvent);
       }
 
       private SalesOrder(Guid id)
@@ -52,42 +41,59 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
          Id = id;
       }
 
-      private SalesOrder(Guid id, string orderNumber, Address placingCustomer)
-         : this(id)
-      {
-         _orderItems = new List<SalesOrderItem>();
-         _statusId = SalesOrderStatus.Started.Id;
-         OrderDate = DateTime.Now;
-
-         var domainEvent = new SalesOrderCreatedDomainEvent(Id, orderNumber, placingCustomer);
-         Apply(domainEvent);
-         AddDomainEvent(domainEvent);
-      }
-
       public static SalesOrder CreateDraft()
       {
-         return new SalesOrder();
+         var order = new SalesOrder();
+
+         order._statusId = SalesOrderStatus.Started.Id;
+         order.OrderDate = DateTime.Now;
+
+         var domainEvent = new SalesOrderStartedDomainEvent(order.Id);
+         order.Apply(domainEvent);
+         order.AddDomainEvent(domainEvent);
+
+         return order;
       }
 
-      public static SalesOrder Create(Guid id, string orderNumber, Address customer)
+      public static SalesOrder Create(Guid id, DateTime orderDate, string orderNumber, Address placingCustomer, List<SalesOrderItem> items)
       {
-         return new SalesOrder(id, orderNumber, customer);
-      }
+         var order = new SalesOrder(id);
 
-      public void SetSalesOrderNumber()
-      {
+         order._statusId = SalesOrderStatus.Copied.Id;
+
+         var domainEvent = new SalesOrderCreatedDomainEvent(id, orderDate, orderNumber, placingCustomer, items);
+
+         order.Apply(domainEvent);
+         order.AddDomainEvent(domainEvent);
+
+         return order;
       }
 
       public void AddItem(Guid productId)
       {
-         // (string productId, string productName, decimal unitPrice, decimal discount, decimal units = 1m)
          var item = SalesOrderItem.Create(productId);
          _orderItems.Add(item);
       }
 
+      public void Calculate()
+      {
+      }
+
       protected override void Apply(IDomainEvent @event)
       {
-         throw new NotImplementedException();
+         this.When((dynamic)@event);
+      }
+
+      private void When(SalesOrderStartedDomainEvent domainEvent)
+      {
+      }
+
+      private void When(SalesOrderCreatedDomainEvent domainEvent)
+      {
+         OrderDate = domainEvent.OrderDate;
+         OrderNumber = domainEvent.OrderNumber;
+         Address = domainEvent.PlacingCustomer;
+         _orderItems.AddRange(domainEvent.Items);
       }
    }
 }

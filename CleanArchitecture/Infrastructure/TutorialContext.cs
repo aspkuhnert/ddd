@@ -1,12 +1,8 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cto.Tutorial.CleanArchitecture.Infrastructure
 {
@@ -14,9 +10,20 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
       DbContext,
       IUnitOfWork
    {
+      private readonly IMediator _mediator;
+
+      private readonly IServiceProvider _provider;
+
       public TutorialContext([NotNullAttribute] DbContextOptions<TutorialContext> options)
         : base(options)
       {
+      }
+
+      public TutorialContext([NotNullAttribute] DbContextOptions<TutorialContext> options, IMediator mediator, IServiceProvider provider)
+         : base(options)
+      {
+         _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+         _provider = provider ?? throw new ArgumentNullException(nameof(provider));
       }
 
       public DbSet<SalesOrder> SalesOrders { get; set; }
@@ -33,9 +40,14 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
          base.OnModelCreating(modelBuilder);
       }
 
-      public Task<bool> SaveChangesAndDispachEventsAsync(CancellationToken cancellationToken = default)
+      public async Task<bool> SaveChangesAndDispachEventsAsync(CancellationToken cancellationToken = default)
       {
-         throw new NotImplementedException();
+         // dispatch events with mediator
+         await _mediator.DispatchDomainEventsAsync(this);
+
+         var result = await base.SaveChangesAsync(cancellationToken);
+
+         return true;
       }
    }
 }

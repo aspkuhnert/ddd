@@ -21,12 +21,14 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 
       public static SalesOrderStatus Invoiced = new SalesOrderStatus(8, nameof(Invoiced).ToLowerInvariant());
 
+      public static SalesOrderStatus Copied = new SalesOrderStatus(9, nameof(Copied).ToLowerInvariant());
+
       public SalesOrderStatus(int id, string name)
          : base(id, name)
       {
       }
 
       public static IEnumerable<SalesOrderStatus> List() =>
-         new[] { Started, AwaitingStockValidation, StockConfirmed, PartlyDelivered, Delivered, PartlyInvoiced, Invoiced };
+         new[] { Started, AwaitingStockValidation, StockConfirmed, PartlyDelivered, Delivered, PartlyInvoiced, Invoiced, Copied };
    }
 }
