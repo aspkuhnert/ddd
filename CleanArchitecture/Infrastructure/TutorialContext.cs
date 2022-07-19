@@ -43,7 +43,7 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
       public async Task<bool> SaveChangesAndDispachEventsAsync(CancellationToken cancellationToken = default)
       {
          // dispatch events with mediator
-         await _mediator.DispatchDomainEventsAsync(this);
+         await _mediator.DispatchDomainEventsAsync(this, _provider);
 
          var result = await base.SaveChangesAsync(cancellationToken);
 

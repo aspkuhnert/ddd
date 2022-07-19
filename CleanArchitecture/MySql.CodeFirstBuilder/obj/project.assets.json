@@ -624,6 +624,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Cto.Tutorial.CleanArchitecture.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Cto.Tutorial.CleanArchitecture.Domain": "1.0.0",
+          "MediatR": "10.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Cto.Tutorial.CleanArchitecture.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cto.Tutorial.CleanArchitecture.Application.dll": {}
+        }
+      },
       "Cto.Tutorial.CleanArchitecture.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -641,6 +655,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Cto.Tutorial.CleanArchitecture.Application": "1.0.0",
           "Cto.Tutorial.CleanArchitecture.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.7"
@@ -1573,6 +1588,11 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Cto.Tutorial.CleanArchitecture.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     },
     "Cto.Tutorial.CleanArchitecture.Domain/1.0.0": {
       "type": "project",
