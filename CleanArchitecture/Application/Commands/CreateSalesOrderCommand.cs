@@ -15,7 +15,7 @@ namespace Cto.Tutorial.CleanArchitecture.Application.Commands
       {
          OrderDate = orderDate;
          Address = address;
-         Items = orderItems ?? throw new ArgumentNullException(nameof(orderItems));
+         Items = orderItems ?? new List<OrderItemDto>();
       }
    }
 }

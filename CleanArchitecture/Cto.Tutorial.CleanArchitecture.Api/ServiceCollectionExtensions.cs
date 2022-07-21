@@ -1,7 +1,9 @@
-﻿using Cto.Tutorial.CleanArchitecture.Application.Services;
+﻿using Cto.Tutorial.CleanArchitecture.Application.BuildingBlocks.Persistence;
+using Cto.Tutorial.CleanArchitecture.Application.Services;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales;
 using Cto.Tutorial.CleanArchitecture.Infrastructure;
-using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks;
+using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks.DomainNotifications;
+using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks.Persistence;
 using Cto.Tutorial.CleanArchitecture.Infrastructure.Domain.Sales;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,8 @@ namespace Cto.Tutorial.CleanArchitecture.Api
 
          services.AddDbContext<TutorialContext>(options => options.UseMySql(connectionString, serverVersion));
 
+         services.AddScoped<ISqlConnectionFactory>(service => new SqlConnectionFactory(connectionString));
+
          return services;
       }
 
@@ -48,7 +52,7 @@ namespace Cto.Tutorial.CleanArchitecture.Api
       {
          services.AddTransient<ISalesOrderRepository, SalesOrderRepository>();
 
-         services.AddTransient<ApplicationService, ApplicationService>();
+         services.AddTransient<IApplicationService, ApplicationService>();
 
          return services;
       }

@@ -1,6 +1,6 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Application.Events;
 using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
-using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks;
+using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks.DomainNotifications;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;

@@ -13,7 +13,7 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 
       private int _statusId;
 
-      public string OrderNumber { get; private set; }
+      //public string OrderNumber { get; private set; }
 
       public DateTime OrderDate { get; private set; }
 
@@ -33,6 +33,7 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
       {
          Id = Guid.NewGuid();
          _orderItems = new List<SalesOrderItem>();
+         NetTotal = Money.Of(0m, "EUR");
       }
 
       private SalesOrder(Guid id)
@@ -55,14 +56,13 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
          return order;
       }
 
-      public static SalesOrder Create(Guid id, DateTime orderDate, string orderNumber, Address placingCustomer, List<SalesOrderItem> items)
+      public static SalesOrder Create(Guid id, DateTime orderDate, Address placingCustomer)
       {
          var order = new SalesOrder(id);
 
          order._statusId = SalesOrderStatus.Copied.Id;
 
-         var domainEvent = new SalesOrderCreatedDomainEvent(id, orderDate, orderNumber, placingCustomer, items);
-
+         var domainEvent = new SalesOrderCreatedDomainEvent(id, orderDate, placingCustomer);
          order.Apply(domainEvent);
          order.AddDomainEvent(domainEvent);
 
@@ -73,6 +73,11 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
       {
          var item = SalesOrderItem.Create(productId);
          _orderItems.Add(item);
+      }
+
+      public void AddItems(IEnumerable<SalesOrderItem> items)
+      {
+         _orderItems.AddRange(items);
       }
 
       public void Calculate()
@@ -91,9 +96,7 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
       private void When(SalesOrderCreatedDomainEvent domainEvent)
       {
          OrderDate = domainEvent.OrderDate;
-         OrderNumber = domainEvent.OrderNumber;
          Address = domainEvent.PlacingCustomer;
-         _orderItems.AddRange(domainEvent.Items);
       }
    }
 }

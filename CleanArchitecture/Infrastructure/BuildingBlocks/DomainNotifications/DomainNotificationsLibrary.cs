@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks
+namespace Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks.DomainNotifications
 {
    public class DomainNotificationsLibrary :
       IDomainNotificationsLibrary

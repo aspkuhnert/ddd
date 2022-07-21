@@ -45,7 +45,14 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
          // dispatch events with mediator
          await _mediator.DispatchDomainEventsAsync(this, _provider);
 
-         var result = await base.SaveChangesAsync(cancellationToken);
+         try
+         {
+            var result = await base.SaveChangesAsync(cancellationToken);      
+         }
+         catch (Exception ex)
+         {
+            var x = ex.Message;
+         }
 
          return true;
       }

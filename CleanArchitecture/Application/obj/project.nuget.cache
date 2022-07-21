@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HHZy7hz89WnyjnNaVJuyqtW8dQBKZaGc84GSo85+Yc+s2Atlc8p8AKgV7qJ/xKT+tCfyjq0Pih0dEzaQcJzErQ==",
+  "dgSpecHash": "x7hwzxqvWGXUK+cQBzb1QtNJMySzQeatduCqjHggV+Ayj1vW8M5qN/dIGocLGXk9Zbc9TIskhUWXkmfCZRH64A==",
   "success": true,
   "projectFilePath": "C:\\Source\\Experiments\\ddd\\CleanArchitecture\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anja\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Anja\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
   ],
