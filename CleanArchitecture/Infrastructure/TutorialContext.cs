@@ -1,4 +1,5 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
+using Cto.Tutorial.CleanArchitecture.Domain.Inventory;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -26,11 +27,17 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
          _provider = provider ?? throw new ArgumentNullException(nameof(provider));
       }
 
+      // Sales
       public DbSet<SalesOrder> SalesOrders { get; set; }
 
       public DbSet<SalesOrderItem> SalesOrderItems { get; set; }
 
       public DbSet<SalesOrderStatus> SalesOrderInternStatus { get; set; }
+
+      // Inventory
+      public DbSet<CatalogItem> CatalogItems { get; set; }
+
+      public DbSet<IdentificationType> IdentificationTypes { get; set; }
 
       protected override void OnModelCreating(ModelBuilder modelBuilder)
       {
