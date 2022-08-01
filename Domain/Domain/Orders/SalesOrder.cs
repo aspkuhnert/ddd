@@ -1,4 +1,5 @@
-﻿using Cto.Tutorial.Domain.Seedwork;
+﻿using Cto.Tutorial.Domain.Orders.Rules;
+using Cto.Tutorial.Domain.Seedwork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,10 @@ namespace Cto.Tutorial.Domain.Orders
 
       public string OrderNumber { get; private set; }
 
+      public string Currency { get; private set; }
+
+      public bool IsPosted { get; private set; }
+
       public DateTime OrderDate { get; private set; }
 
       private readonly List<SalesOrderItem> _orderItems;
@@ -36,12 +41,14 @@ namespace Cto.Tutorial.Domain.Orders
       private SalesOrder()
       {
          Id = Guid.NewGuid();
+         IsPosted = false;
          _orderItems = new List<SalesOrderItem>();
          _statusId = SalesOrderStatus.Started.Id;
          OrderDate = DateTime.Now;
+         Currency = "EUR";
       }
 
-      private SalesOrder(Guid id)
+      private SalesOrder(Guid id, string currency, bool isPosted, DateTime orderDate)
          : this()
       {
          Id = id;
@@ -52,14 +59,16 @@ namespace Cto.Tutorial.Domain.Orders
          return new SalesOrder();
       }
 
-      public static SalesOrder Create(Guid id)
+      public static SalesOrder Create(Guid id, string currency, bool isPosted, DateTime orderDate)
       {
-         return new SalesOrder(id);
+         return new SalesOrder(id, currency, isPosted, orderDate);
       }
 
-      public SalesOrder AddOrderItem(Guid productId)
+      public SalesOrder AddOrderItem(Guid productId, string productName, decimal unitPrice, decimal quantityOrdered)
       {
-         var item = SalesOrderItem.Create(productId);
+         CheckRule(new SalesOrderMustNotBePostedRule(IsPosted));
+
+         var item = SalesOrderItem.Create(productId, productName, unitPrice, quantityOrdered, Currency);
          _orderItems.Add(item);
 
          return this;
@@ -68,6 +77,36 @@ namespace Cto.Tutorial.Domain.Orders
       public SalesOrder AddAddress(Address address)
       {
          this.Address = address;
+
+         return this;
+      }
+
+      public SalesOrder Calculate()
+      {
+         if (_orderItems.Any())
+         {
+            decimal netTotal = 0;
+
+            foreach (var item in _orderItems)
+            {
+               item.Calculate();
+               netTotal += (decimal)item.NetPrice.Value;
+            }
+
+            NetTotal = Money.Of(netTotal, Currency);
+         }
+         else
+         {
+            NetTotal = Money.Of(0, Currency);
+         }
+
+         return this;
+      }
+
+      public SalesOrder Post()
+      {
+         Calculate();
+         IsPosted = true;
 
          return this;
       }

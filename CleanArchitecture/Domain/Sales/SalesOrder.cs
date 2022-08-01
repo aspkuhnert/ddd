@@ -13,8 +13,6 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 
       private int _statusId;
 
-      //public string OrderNumber { get; private set; }
-
       public DateTime OrderDate { get; private set; }
 
       private readonly List<SalesOrderItem> _orderItems;

@@ -9,27 +9,46 @@ namespace Cto.Tutorial.Domain.Orders
 
       public Guid ProductId { get; private set; }
 
+      public string ProductName { get; private set; }
+
+      public string OrderCurrency { get; private set; }
+
       public decimal QuantityOrdered { get; private set; }
 
       public Money UnitPrice { get; private set; }
 
       public Money NetPrice { get; private set; }
 
-      protected SalesOrderItem()
+      private SalesOrderItem(string currency)
       {
          Id = Guid.NewGuid();
          QuantityOrdered = 1;
+         OrderCurrency = currency;
       }
 
-      private SalesOrderItem(Guid productId)
-         : this()
+      private SalesOrderItem(Guid productId, string currency)
+         : this(currency)
       {
          ProductId = productId;
       }
 
-      public static SalesOrderItem Create(Guid productId)
+      public static SalesOrderItem Create(Guid productId, string productName, decimal unitPrice, decimal quantityOrdered, string currency)
       {
-         return new SalesOrderItem(productId);
+         var item = new SalesOrderItem(productId, currency);
+
+         item.ProductName = productName;
+         var unitPriceMoney = Money.Of(unitPrice, currency);
+         item.UnitPrice = unitPriceMoney;
+         item.QuantityOrdered = quantityOrdered;
+
+         return item;
+      }
+
+      public SalesOrderItem Calculate()
+      {
+         NetPrice = Money.Of((decimal)UnitPrice.Value * QuantityOrdered, OrderCurrency);
+
+         return this;
       }
    }
 }

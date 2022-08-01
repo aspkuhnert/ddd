@@ -3,7 +3,7 @@
 namespace Cto.Tutorial.Domain.Seedwork
 {
    [Serializable]
-   internal class BusinessRuleValidationException :
+   public class BusinessRuleValidationException :
       Exception
    {
       private readonly IBusinessRule _rule;
