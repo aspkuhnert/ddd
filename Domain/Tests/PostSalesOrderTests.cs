@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tests
+namespace Cto.Tutorial.Domain.Tests
 {
    [TestClass]
    public class PostSalesOrderTests

@@ -68,7 +68,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Source\\Experiments\\ddd\\Domain\\Tests\\Tests.csproj",
-        "projectName": "Tests",
+        "projectName": "Cto.Tutorial.Domain.Tests",
         "projectPath": "C:\\Source\\Experiments\\ddd\\Domain\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\Anja\\.nuget\\packages\\",
         "outputPath": "C:\\Source\\Experiments\\ddd\\Domain\\Tests\\obj\\",

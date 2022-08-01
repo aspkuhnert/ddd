@@ -1,7 +1,7 @@
 using Cto.Tutorial.Domain.Orders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace Cto.Tutorial.Domain.Tests
 {
    [TestClass]
    public class CreateSalesOrderTests
