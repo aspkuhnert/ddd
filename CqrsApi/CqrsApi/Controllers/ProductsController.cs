@@ -19,11 +19,11 @@ namespace Cto.Tutorial.CqrsApi.Controllers
       [HttpPost]
       public async Task<IActionResult> Create([FromBody] CreateProductRequest request)
       {
-         var productToReturn = await _mediator.Send(new CreateProductCommand(request));
+         var productId = await _mediator.Send(new CreateProductCommand(request));
 
-         await _mediator.Publish(new ProductCreatedNotification(productToReturn));
+         await _mediator.Publish(new ProductCreatedNotification(productId));
 
-         return CreatedAtRoute("GetById", new { id = productToReturn.Id }, productToReturn);
+         return CreatedAtRoute("GetById", new { id = productId });
       }
 
       [Route("Products")]

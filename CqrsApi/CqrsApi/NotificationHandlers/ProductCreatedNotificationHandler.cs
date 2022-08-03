@@ -16,7 +16,7 @@ namespace Cto.Tutorial.CqrsApi.NotificationHandlers
 
       public async Task Handle(ProductCreatedNotification notification, CancellationToken cancellationToken)
       {
-         await _eventStore.AddEvent(new DomainEvent("ProductCreatedNotification", JsonConvert.SerializeObject(notification.product)));
+         await _eventStore.AddEvent(new DomainEvent("ProductCreatedNotification", JsonConvert.SerializeObject(notification)));
       }
    }
 }

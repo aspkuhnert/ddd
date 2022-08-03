@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Cto.Tutorial.CqrsApi.Notifications
 {
-   public record ProductCreatedNotification(ProductView product) : 
+   public record ProductCreatedNotification(Guid productId) : 
       INotification;
 }
