@@ -23,7 +23,7 @@ namespace Cto.Tutorial.CqrsApi.Controllers
 
          await _mediator.Publish(new ProductCreatedNotification(productId));
 
-         return CreatedAtRoute("GetById", new { id = productId });
+         return CreatedAtRoute("GetById", new { id = productId }, productId);
       }
 
       [Route("Products")]
