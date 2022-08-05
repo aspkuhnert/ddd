@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{54EF3CD8-3CAC-4905-A331-FBD493D1AE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cto.Tutorial.CleanArchitecture.Api", "Cto.Tutorial.CleanArchitecture.Api\Cto.Tutorial.CleanArchitecture.Api.csproj", "{745F63A0-B809-46A8-B70E-F40BDD5C499D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cto.Tutorial.CleanArchitecture.Api", "Cto.Tutorial.CleanArchitecture.Api\Cto.Tutorial.CleanArchitecture.Api.csproj", "{745F63A0-B809-46A8-B70E-F40BDD5C499D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySql.CodeFirstBuilder", "MySql.CodeFirstBuilder\MySql.CodeFirstBuilder.csproj", "{23AD7305-2C3F-4D69-8AC3-7B6656BA3AC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySql.CodeFirstBuilder", "MySql.CodeFirstBuilder\MySql.CodeFirstBuilder.csproj", "{23AD7305-2C3F-4D69-8AC3-7B6656BA3AC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{22F01509-430D-400F-8538-26F175951705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{22F01509-430D-400F-8538-26F175951705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks.csproj", "{1E25CA25-1A12-4EFA-AE7F-F60E11E97BD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{22F01509-430D-400F-8538-26F175951705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F01509-430D-400F-8538-26F175951705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22F01509-430D-400F-8538-26F175951705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E25CA25-1A12-4EFA-AE7F-F60E11E97BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E25CA25-1A12-4EFA-AE7F-F60E11E97BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E25CA25-1A12-4EFA-AE7F-F60E11E97BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E25CA25-1A12-4EFA-AE7F-F60E11E97BD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

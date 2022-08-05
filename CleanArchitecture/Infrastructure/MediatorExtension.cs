@@ -1,13 +1,8 @@
-﻿using Cto.Tutorial.CleanArchitecture.Application.Events;
-using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
-using Cto.Tutorial.CleanArchitecture.Infrastructure.BuildingBlocks.DomainNotifications;
+﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Events;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Infrastructure.DomainNotifications;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cto.Tutorial.CleanArchitecture.Infrastructure
 {
@@ -55,7 +50,6 @@ namespace Cto.Tutorial.CleanArchitecture.Infrastructure
                var x = ex;
             }
          }
-
 
          domainEntities
             .ToList()

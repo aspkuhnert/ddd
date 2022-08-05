@@ -1612,8 +1612,18 @@
           "Cto.Tutorial.CleanArchitecture.Application.dll": {}
         }
       },
+      "Cto.Tutorial.CleanArchitecture.BuildingBlocks/1.0.0": {
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MySql.Data": "8.0.29"
+        },
+        "runtime": {
+          "Cto.Tutorial.CleanArchitecture.BuildingBlocks.dll": {}
+        }
+      },
       "Cto.Tutorial.CleanArchitecture.Domain/1.0.0": {
         "dependencies": {
+          "Cto.Tutorial.CleanArchitecture.BuildingBlocks": "1.0.0",
           "MediatR": "10.0.1"
         },
         "runtime": {
@@ -2600,6 +2610,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Cto.Tutorial.CleanArchitecture.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cto.Tutorial.CleanArchitecture.BuildingBlocks/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

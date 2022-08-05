@@ -18,4 +18,8 @@
     <Folder Include="Sales\Rules\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.csproj" />
+  </ItemGroup>
+
 </Project>

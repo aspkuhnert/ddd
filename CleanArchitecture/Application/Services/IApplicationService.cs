@@ -1,5 +1,7 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Application.Commands;
 using Cto.Tutorial.CleanArchitecture.Application.Queries;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Commands;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

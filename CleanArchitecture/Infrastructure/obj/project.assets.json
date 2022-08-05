@@ -550,10 +550,25 @@
           "bin/placeholder/Cto.Tutorial.CleanArchitecture.Application.dll": {}
         }
       },
+      "Cto.Tutorial.CleanArchitecture.BuildingBlocks/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MySql.Data": "8.0.29"
+        },
+        "compile": {
+          "bin/placeholder/Cto.Tutorial.CleanArchitecture.BuildingBlocks.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cto.Tutorial.CleanArchitecture.BuildingBlocks.dll": {}
+        }
+      },
       "Cto.Tutorial.CleanArchitecture.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Cto.Tutorial.CleanArchitecture.BuildingBlocks": "1.0.0",
           "MediatR": "10.0.1"
         },
         "compile": {
@@ -1544,6 +1559,11 @@
       "type": "project",
       "path": "../Application/Application.csproj",
       "msbuildProject": "../Application/Application.csproj"
+    },
+    "Cto.Tutorial.CleanArchitecture.BuildingBlocks/1.0.0": {
+      "type": "project",
+      "path": "../BuildingBlocks/BuildingBlocks.csproj",
+      "msbuildProject": "../BuildingBlocks/BuildingBlocks.csproj"
     },
     "Cto.Tutorial.CleanArchitecture.Domain/1.0.0": {
       "type": "project",

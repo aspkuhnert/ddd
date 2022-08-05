@@ -1,4 +1,5 @@
 ﻿using Cto.Tutorial.CleanArchitecture.Application.DataTransferModel;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;

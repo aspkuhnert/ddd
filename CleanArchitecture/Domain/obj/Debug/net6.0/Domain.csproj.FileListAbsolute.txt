@@ -10,3 +10,6 @@ C:\Source\Experiments\ddd\CleanArchitecture\Domain\obj\Debug\net6.0\Cto.Tutorial
 C:\Source\Experiments\ddd\CleanArchitecture\Domain\obj\Debug\net6.0\refint\Cto.Tutorial.CleanArchitecture.Domain.dll
 C:\Source\Experiments\ddd\CleanArchitecture\Domain\obj\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Domain.pdb
 C:\Source\Experiments\ddd\CleanArchitecture\Domain\obj\Debug\net6.0\ref\Cto.Tutorial.CleanArchitecture.Domain.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Domain\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.BuildingBlocks.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Domain\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.BuildingBlocks.pdb
+C:\Source\Experiments\ddd\CleanArchitecture\Domain\obj\Debug\net6.0\Domain.csproj.CopyComplete

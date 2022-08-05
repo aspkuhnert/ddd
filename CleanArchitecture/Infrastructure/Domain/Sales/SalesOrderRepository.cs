@@ -1,4 +1,5 @@
-﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
+﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
+using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

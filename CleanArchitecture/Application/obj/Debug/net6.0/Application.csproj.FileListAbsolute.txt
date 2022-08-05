@@ -13,3 +13,5 @@ C:\Source\Experiments\ddd\CleanArchitecture\Application\obj\Debug\net6.0\ref\Cto
 C:\Source\Experiments\ddd\CleanArchitecture\Application\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Domain.dll
 C:\Source\Experiments\ddd\CleanArchitecture\Application\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.Domain.pdb
 C:\Source\Experiments\ddd\CleanArchitecture\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Source\Experiments\ddd\CleanArchitecture\Application\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.BuildingBlocks.dll
+C:\Source\Experiments\ddd\CleanArchitecture\Application\bin\Debug\net6.0\Cto.Tutorial.CleanArchitecture.BuildingBlocks.pdb

@@ -1,4 +1,4 @@
-﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
+﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 {

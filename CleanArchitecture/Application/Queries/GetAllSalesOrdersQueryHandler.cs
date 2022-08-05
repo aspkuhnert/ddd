@@ -1,11 +1,7 @@
-﻿using Cto.Tutorial.CleanArchitecture.Application.BuildingBlocks.Persistence;
-using Cto.Tutorial.CleanArchitecture.Application.DataTransferModel;
+﻿using Cto.Tutorial.CleanArchitecture.Application.DataTransferModel;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Persistence;
+using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Application.Queries;
 using Dapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cto.Tutorial.CleanArchitecture.Application.Queries
 {

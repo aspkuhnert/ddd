@@ -9,13 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="BuildingBlocks\Commands\" />
-    <Folder Include="BuildingBlocks\Events\" />
-    <Folder Include="BuildingBlocks\Queries\" />
-    <Folder Include="DomainEventHandlers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>

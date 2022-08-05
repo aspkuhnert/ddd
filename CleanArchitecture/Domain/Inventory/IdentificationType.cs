@@ -1,9 +1,4 @@
-﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Inventory
 {
@@ -13,7 +8,6 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Inventory
       public IdentificationType(int id, string name)
          : base(id, name)
       {
-         //IdentificationValues = new List<IdentificationValue>();
       }
 
       public static IdentificationType Sku = new IdentificationType(1, nameof(Sku).ToLowerInvariant());
@@ -26,7 +20,5 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Inventory
 
       public static IEnumerable<IdentificationType> List() =>
          new[] { Sku, EanGtin, Asin, ManufacturerIdNo };
-
-      //public List<IdentificationValue> IdentificationValues { get; set; }
    }
 }

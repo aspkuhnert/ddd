@@ -1,4 +1,4 @@
-﻿using Cto.Tutorial.CleanArchitecture.Domain.BuildingBlocks;
+﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Inventory
 {
@@ -21,9 +21,7 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Inventory
 
       private IdentificationValue(CatalogItem catalogItem, IdentificationType type, string value)
       {
-         //Item = inventoryItem ?? throw new ArgumentNullException(nameof(inventoryItem));
          CatalogItemId = catalogItem.Id;
-         //Type = type ?? throw new ArgumentNullException(nameof(type));
          IdentificationTypeId = type.Id;
          Value = value;
       }
