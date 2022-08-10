@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Cto.Tutorial.CleanArchitecture.Infrastructure
 {
-   internal static class MediatorExtension
+   internal static class MediatorExtensions
    {
       public static async Task DispatchDomainEventsAsync(
          this IMediator mediator,

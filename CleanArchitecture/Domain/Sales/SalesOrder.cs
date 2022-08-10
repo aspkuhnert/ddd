@@ -1,5 +1,6 @@
 ﻿using Cto.Tutorial.CleanArchitecture.BuildingBlocks.Domain;
 using Cto.Tutorial.CleanArchitecture.Domain.Sales.Events;
+using Cto.Tutorial.CleanArchitecture.Domain.Sales.Rules;
 
 namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
 {
@@ -12,6 +13,10 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
       public SalesOrderStatus OrderStatus { get; private set; }
 
       private int _statusId;
+
+      public string Currency { get; private set; }
+
+      public bool IsPosted { get; private set; }
 
       public DateTime OrderDate { get; private set; }
 
@@ -67,19 +72,52 @@ namespace Cto.Tutorial.CleanArchitecture.Domain.Sales
          return order;
       }
 
-      public void AddItem(Guid productId)
+      public void AddOrderItem(Guid productId, string productName, decimal unitPrice, decimal quantityOrdered)
       {
-         var item = SalesOrderItem.Create(productId);
+         CheckRule(new SalesOrderMustNotBePostedRule(IsPosted));
+
+         var item = SalesOrderItem.Create(productId, productName, unitPrice, quantityOrdered, Currency);
          _orderItems.Add(item);
+      }
+
+      public void AddAddress(Address address)
+      {
+         this.Address = address;
+      }
+
+      public void ChangeMainAttributes()
+      {
+      }
+
+      public void Calculate()
+      {
+         if (_orderItems.Any())
+         {
+            decimal netTotal = 0;
+
+            foreach (var item in _orderItems)
+            {
+               item.Calculate();
+               netTotal += (decimal)item.NetPrice.Value;
+            }
+
+            NetTotal = Money.Of(netTotal, Currency);
+         }
+         else
+         {
+            NetTotal = Money.Of(0, Currency);
+         }
+      }
+
+      public void Post()
+      {
+         Calculate();
+         IsPosted = true;
       }
 
       public void AddItems(IEnumerable<SalesOrderItem> items)
       {
          _orderItems.AddRange(items);
-      }
-
-      public void Calculate()
-      {
       }
 
       protected override void Apply(IDomainEvent @event)

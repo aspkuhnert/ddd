@@ -15,7 +15,6 @@
   <ItemGroup>
     <Folder Include="Inventory\Events\" />
     <Folder Include="Inventory\Rules\" />
-    <Folder Include="Sales\Rules\" />
   </ItemGroup>
 
   <ItemGroup>

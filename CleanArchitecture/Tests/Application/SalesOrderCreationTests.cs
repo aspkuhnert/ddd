@@ -27,7 +27,7 @@ namespace Cto.Tutorial.CleanArchitecture.Tests.Application
             var application = scope.ServiceProvider.GetRequiredService<IApplicationService>();
 
             // act
-            var address = new AddressDto
+            var address = new AddressDto()
             {
                Name = "Test",
                AddressLine1 = "Testzeile 1",
@@ -39,9 +39,22 @@ namespace Cto.Tutorial.CleanArchitecture.Tests.Application
                Country = "Country",
                CountryIsoCode = "DE"
             };
-            var orderGuid = application.ExecuteCommandAsync(new CreateSalesOrderCommand(DateTime.Now, address, null));
+            var item = new OrderItemDto()
+            {
+               ProductId = Guid.NewGuid(),
+               ProductName = "Test",
+               UnitPrice = 10.0m,
+               Currency = "EUR",
+               QuantityOrdered = 1
+            };
+            var items = new List<OrderItemDto>();
+            items.Add(item);  
+
+            var orderGuid = application.ExecuteCommandAsync(new CreateSalesOrderCommand(DateTime.Now, address, items));
 
             // assert
+            Assert.IsNotNull(orderGuid.Result);
+
             var result = application.ExecuteQueryAsync(new GetAllSalesOrdersQuery());
 
             Assert.IsNotNull(result);

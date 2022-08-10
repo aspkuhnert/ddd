@@ -44,7 +44,7 @@ namespace Cto.Tutorial.CleanArchitecture.Application.CommandHandlers
 
             foreach (var item in request.Items)
             {
-               var domainItem = SalesOrderItem.Create(item.ProductId);
+               var domainItem = SalesOrderItem.Create(item.ProductId, item.ProductName, item.UnitPrice, item.QuantityOrdered, item.Currency);
                orderItems.Add(domainItem);
             }
 
